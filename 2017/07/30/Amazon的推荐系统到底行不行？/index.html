@@ -14,9 +14,9 @@
 <meta property="og:description" content="作者 ：ResysChina 亚马逊在业内有「推荐系统之王」之称，亚马逊有35%的销售额是与推荐系统相关的[1]。但是最近，微软的研究员Amit Sharma发表了一篇paper《Estimating the causal impact of recommendation systems from observational data》[2]，对这个事情提出了质疑。这篇论文分析了Amazon上40">
 <meta property="og:image" content="https://github.com/vayyne/vayyne.github.io/blob/master/image/8E7E6F0C391A15266A8A58E92443F65F.jpg">
 <meta property="og:image" content="https://github.com/vayyne/vayyne.github.io/blob/master/image/AFF3E6DF3E9B068739C2A73B8D708971.jpg">
-<meta property="og:image" content="https://github.com/vayyne/vayyne.github.io/blob/master/image/E5FF2AB95053B01A6C9F5B25398609BB.jpg">
+<meta property="og:image" content="http://yoursite.com/2017/07/30/Amazon的推荐系统到底行不行？/vayyne.github.io/image/E5FF2AB95053B01A6C9F5B25398609BB.jpg">
 <meta property="og:image" content="https://github.com/vayyne/vayyne.github.io/blob/master/image/9AD0FDB4B5397E121598F96803843BCD.jpg">
-<meta property="og:updated_time" content="2017-07-31T09:45:53.000Z">
+<meta property="og:updated_time" content="2017-07-31T09:50:18.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Amazon的推荐系统到底行不行？">
 <meta name="twitter:description" content="作者 ：ResysChina 亚马逊在业内有「推荐系统之王」之称，亚马逊有35%的销售额是与推荐系统相关的[1]。但是最近，微软的研究员Amit Sharma发表了一篇paper《Estimating the causal impact of recommendation systems from observational data》[2]，对这个事情提出了质疑。这篇论文分析了Amazon上40">
@@ -86,7 +86,7 @@
             <div id="search-form-wrap">
 
     <form class="search-form">
-        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
+        <input type="text" class="ins-search-input search-form-input" placeholder="Buscar" />
         <button type="submit" class="search-form-submit"></button>
     </form>
     <div class="ins-search">
@@ -105,10 +105,10 @@
 (function (window) {
     var INSIGHT_CONFIG = {
         TRANSLATION: {
-            POSTS: 'Posts',
+            POSTS: 'Entradas',
             PAGES: 'Pages',
-            CATEGORIES: 'Categories',
-            TAGS: 'Tags',
+            CATEGORIES: 'Categorias',
+            TAGS: 'Etiquetas',
             UNTITLED: '(Untitled)',
         },
         ROOT_URL: '/',
@@ -139,7 +139,7 @@
                 <td>
                     
     <div class="search-form">
-        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
+        <input type="text" class="ins-search-input search-form-input" placeholder="Buscar" />
     </div>
 
                 </td>
@@ -159,16 +159,16 @@
             <h2 id="name">vayyne</h2>
             <h3 id="title">product manager</h3>
             <span id="location"><i class="fa fa-map-marker"></i>shanghai, China</span>
-            <a id="follow" target="_blank" href="https://github.com/vayyne/">FOLLOW</a>
+            <a id="follow" target="_blank" href="https://github.com/vayyne/">SEGUIR</a>
         </div>
         <div class="article-info profile-block">
             <div class="article-info-block">
                 2
-                <span>posts</span>
+                <span>Entradas</span>
             </div>
             <div class="article-info-block">
                 1
-                <span>tag</span>
+                <span>Etiqueta</span>
             </div>
         </div>
         
@@ -270,7 +270,7 @@
 <hr>
 <p>原论文中对「推荐」的定义太过狭隘，暂且不说现如今很多搜索结果都是个性化过的，像Amazon这样的网站，推荐几乎已经无所不在了。而「便利性点击」恰恰正是推荐系统所追求的目标之一。推荐系统让用户生活更容易、更便利，从长期上看，用户因此会购买更多商品，或者对服务的满意度更高。所以从实践意义上看，原论文定义的问题根本就是个杯具。当我们使用A/B测试衡量一个推荐系统的效果时，我们更加看中的是推荐是否让用户「爽」了，用户使用服务爽了，就会带来更多的活跃与营收。「便利性」不是给推荐系统添乱，它是使用推荐系统应该具备的固有益处。</p>
 <p>另外，原论文中说因为数据层面的限制他们做不了在线的A/B测试，很多人很多场景也都做不了，因此它们提出的Shock-IV可以作为推荐系统A/B测试的一种替代方案。Xavier的意思是，你们别闹了，并给出了他之前在前东家Netflix的一个案例，在「<a href="http://mp.weixin.qq.com/s?__biz=MzA4OTk5OTQzMg==&amp;mid=2449231099&amp;idx=1&amp;sn=6ff30a52fbbe9d01ef022661c6325dc4&amp;scene=21#wechat_redirect" target="_blank" rel="external">Netflix推荐系统的最新解读：算法、商业价值与创新</a>」一文中，Netflix发现个性化技术可以显著提高推荐影片的被接受度（Take-Rate），即推荐给用户的影片真正被播放的比率。Netflix做了一个对比分析，见下图，黑色线是基于热门度的曲线，红色线是基于个性化PVR（Personalized Video Ranker）指标的曲线，个性化推荐使得接受度有了巨大的提升。而且除此之外，比接受度提高更有意义的是，优秀的推荐技术使得用户的参与度（观看时长）与退订率都受益匪浅。Netflix的月退订率很低（很小的个位数百分比），大部分是因为支付的问题，真正主动选择退订的非常少。通过在个性化推荐领域的多年耕耘，月退订率得以降低了可观的百分比。月退订率的降低，一来有效延长了会员的付费存续期，二来也降低了为弥补流失用户所要付出的成本。</p>
-<p><img src="https://github.com/vayyne/vayyne.github.io/blob/master/image/E5FF2AB95053B01A6C9F5B25398609BB.jpg" alt=""></p>
+<p><img src="vayyne.github.io/image/E5FF2AB95053B01A6C9F5B25398609BB.jpg" alt=""></p>
 <p>Xavier列举了他认为原论文中的不妥之处，包括，</p>
 <ul>
 <li>实验的设定根本就是错的。</li>
@@ -316,7 +316,7 @@
 
 </div>
 
-    <a data-url="http://yoursite.com/2017/07/30/Amazon的推荐系统到底行不行？/" data-id="cj5rwc36m0000sdxbxh9kp4pf" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://yoursite.com/2017/07/30/Amazon的推荐系统到底行不行？/" data-id="cj5rzb5js0000yrxbxomdj7o7" class="article-share-link"><i class="fa fa-share"></i>Compartir</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -384,7 +384,7 @@
 
             
     
-        <a href="http://yoursite.com/2017/07/30/Amazon的推荐系统到底行不行？/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://yoursite.com/2017/07/30/Amazon的推荐系统到底行不行？/">Comments</a>
+        <a href="http://yoursite.com/2017/07/30/Amazon的推荐系统到底行不行？/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://yoursite.com/2017/07/30/Amazon的推荐系统到底行不行？/">Comentarios</a>
     
 
         </footer>
@@ -395,8 +395,8 @@
     
     
         <a href="/2017/07/30/testtest/" id="article-nav-older" class="article-nav-link-wrap">
-            <strong class="article-nav-caption">Older</strong>
-            <div class="article-nav-title">TESTTEST</div>
+            <strong class="article-nav-caption">Más viejo</strong>
+            <div class="article-nav-title">TEST TEST</div>
         </a>
     
 </nav>
@@ -422,7 +422,7 @@
    
         
     <div class="widget-wrap">
-        <h3 class="widget-title">recent</h3>
+        <h3 class="widget-title">Recientes</h3>
         <div class="widget">
             <ul id="recent-post" class="">
                 
@@ -459,7 +459,7 @@
                         
                         <div class="item-inner">
                             <p class="item-category"></p>
-                            <p class="item-title"><a href="/2017/07/30/testtest/" class="title">TESTTEST</a></p>
+                            <p class="item-title"><a href="/2017/07/30/testtest/" class="title">TEST TEST</a></p>
                             <p class="item-date"><time datetime="2017-07-30T09:54:32.000Z" itemprop="datePublished">2017-07-30</time></p>
                         </div>
                     </li>
@@ -473,7 +473,7 @@
     
         
     <div class="widget-wrap">
-        <h3 class="widget-title">archives</h3>
+        <h3 class="widget-title">Archivos</h3>
         <div class="widget">
             <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a><span class="archive-list-count">2</span></li></ul>
         </div>
@@ -482,7 +482,7 @@
     
         
     <div class="widget-wrap">
-        <h3 class="widget-title">tags</h3>
+        <h3 class="widget-title">Etiquetas</h3>
         <div class="widget">
             <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/推荐系统-收藏/">推荐系统 收藏</a><span class="tag-list-count">1</span></li></ul>
         </div>
@@ -491,7 +491,7 @@
     
         
     <div class="widget-wrap">
-        <h3 class="widget-title">tag cloud</h3>
+        <h3 class="widget-title">Nube de etiquetas</h3>
         <div class="widget tagcloud">
             <a href="/tags/推荐系统-收藏/" style="font-size: 10px;">推荐系统 收藏</a>
         </div>
@@ -500,7 +500,7 @@
     
         
     <div class="widget-wrap widget-list">
-        <h3 class="widget-title">links</h3>
+        <h3 class="widget-title">Links</h3>
         <div class="widget">
             <ul>
                 
